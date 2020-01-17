@@ -6,6 +6,7 @@ const hbs = require('hbs')
 
 
 const app = express() 
+const port = process.env.PORT || 3000
 
 //Defining paths for express config
 const publicDirectoryPath = path.join(__dirname,'../public')
@@ -39,7 +40,7 @@ app.get('/about',(req,res) =>{
 
 app.get('/help',(req,res) =>{
   res.render('help',{
-    helpText : 'Helpful Text',
+    helpText : 'Enter the location name you wish to know the weather for in the search box.',
     title : 'Help' ,
     name : 'Mechy X'
   })
@@ -107,7 +108,7 @@ app.get('*',(req,res) =>{
   })
 })
 
-app.listen(3000, () =>{
-console.log('Server is up on port 3000');
+app.listen(port, () =>{
+console.log('Server is up on port '+port);
 
 })

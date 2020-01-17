@@ -3,6 +3,7 @@
   <style>
 body {
   background-image: url('/img/bg.jpg');
+  background-size: contain;
 }
 </style>
   <head>
@@ -15,15 +16,15 @@ body {
   <body>
            <div class='content'> 
              {{>header}}
-             <p style="color:rgb(243, 85, 28)">Get your Weather now!</p>
+             <p>Get your Weather now!</p>
          
           <form>
            <input placeholder="Location">
           <button>Fetch</button>
             </form>
         
-        <p id="message1" style="color:rgb(243, 85, 28)"></p>
-        <p id="message2" style="color:rgb(243, 85, 28)"></p>
+        <p id="message1" ></p>
+        <p id="message2" ></p>
          </div>
          
           {{>footer}}
